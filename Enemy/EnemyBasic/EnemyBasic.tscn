@@ -1,0 +1,45 @@
+[gd_scene load_steps=9 format=3 uid="uid://ciugiajkkmue0"]
+
+[ext_resource type="Texture2D" uid="uid://pku7tnoyxal8" path="res://icon.svg" id="1_bl6r4"]
+[ext_resource type="Script" uid="uid://d0jxg8pjx5kfh" path="res://Enemy/EnemyBasic/MovementHandler.cs" id="2_hbyaf"]
+[ext_resource type="Script" uid="uid://d30mfysiwa6i1" path="res://Enemy/EnemyBasic/HurtBox.cs" id="2_iddve"]
+[ext_resource type="FontFile" uid="uid://bmt2fn2bclqqm" path="res://Assets/font/VCR_OSD_MONO_1.001.ttf" id="3_iddve"]
+[ext_resource type="Script" uid="uid://cvivnmx7m8f3t" path="res://Enemy/EnemyBasic/HealthHandler.cs" id="4_wq1o6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bl6r4"]
+size = Vector2(60, 60)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wq1o6"]
+bg_color = Color(7.52043e-08, 0.19499633, 0.11082462, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w708m"]
+bg_color = Color(0, 0.7137255, 0.45490196, 1)
+
+[node name="EnemyBasic" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_bl6r4")
+
+[node name="HurtBox" type="Area2D" parent="."]
+script = ExtResource("2_iddve")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("RectangleShape2D_bl6r4")
+
+[node name="MovementHandler" type="Node" parent="."]
+script = ExtResource("2_hbyaf")
+
+[node name="HealthHandler" type="Node" parent="."]
+script = ExtResource("4_wq1o6")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -30.0
+offset_top = -60.0
+offset_right = 30.0
+offset_bottom = -41.0
+theme_override_fonts/font = ExtResource("3_iddve")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/background = SubResource("StyleBoxFlat_wq1o6")
+theme_override_styles/fill = SubResource("StyleBoxFlat_w708m")
+value = 100.0

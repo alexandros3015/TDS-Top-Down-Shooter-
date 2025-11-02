@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbf7jdsdyu736"]
+
+[ext_resource type="Script" uid="uid://6kmhitiuv34q" path="res://MainArea/SpawnArea/SpawnArea.cs" id="1_nor4l"]
+
+[node name="SpawnArea" type="Node2D"]
+script = ExtResource("1_nor4l")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
