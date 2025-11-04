@@ -20,7 +20,11 @@ public partial class SpawnArea : Node2D
         _rng = new RandomNumberGenerator();
         _rng.Randomize();
         _timer = GetNode<Timer>("Timer");
-        _timer.Timeout += TimerOnTimeout;
+        
+        if (_timer != null)
+            _timer.Timeout += TimerOnTimeout;
+        else
+            GD.PushError("Timer not found.");
     }
 
     private void TimerOnTimeout()
@@ -30,6 +34,6 @@ public partial class SpawnArea : Node2D
         AddSibling(enemy);
         enemy.Position = new Vector2(0f, _rng.RandfRange(SpawnMinRange, SpawnMaxRange));
 
-        _timer.WaitTime = MathF.Max(0.5f, Global.Global.Difficulty * -0.2f + 10f);
+        _timer.WaitTime = MathF.Max(0.5f, Global.Difficulty * -0.1f + 10f);
     }
 }

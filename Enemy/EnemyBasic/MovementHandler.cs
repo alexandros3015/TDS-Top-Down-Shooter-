@@ -1,4 +1,5 @@
 using Godot;
+// MovementHandler.cs
 
 namespace tdstopdownshooter.Enemy.EnemyBasic;
 
@@ -7,7 +8,7 @@ public partial class MovementHandler : Node
     private Node2D _target;
     
     [Export]
-    public float  Speed = 50f;
+    public float Speed = 50f;
 
     public override void _Ready()
     {
@@ -15,7 +16,7 @@ public partial class MovementHandler : Node
 
         if (_target == null)
         {
-            GD.PushError("Could not find target");
+            GD.PushError($"MovementHandler could not find parent in {GetPath()}");
         }
     }
 

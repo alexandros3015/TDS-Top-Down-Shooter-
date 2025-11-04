@@ -11,7 +11,7 @@ public partial class JoinGame : Button
 
     private void JoinGameOnPressed()
     {
-        Global.Global.Load();
+        Global.Load();
         
         GetTree().ChangeSceneToFile("res://MainArea/Zone/Zone.tscn");
     }

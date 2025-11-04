@@ -1,12 +1,10 @@
 using Godot;
 
-namespace tdstopdownshooter.Global;
-
 public partial class Global : Node
 {
-    public static Global Instance { get; set; }
-    public static int Difficulty = 0;
-    public static long Money = 0;
+    private static Global Instance { get; set; }
+    public static int Difficulty;
+    public static long Money;
     public static float Cooldown = 1.0f;
     public static int Damage = 10;
     public static float Radius = 50.0f;
@@ -21,7 +19,7 @@ public partial class Global : Node
 
     public static void Save()
     {
-        var saveFile = FileAccess.Open("user://savegame.save", FileAccess.ModeFlags.Write);
+        using var saveFile = FileAccess.Open("user://savegame.save", FileAccess.ModeFlags.Write);
 
         saveFile.StoreVar(Difficulty);
         saveFile.StoreVar(Money);
@@ -36,7 +34,7 @@ public partial class Global : Node
         if (!FileAccess.FileExists("user://savegame.save"))
             return;
         
-        var saveFile = FileAccess.Open("user://savegame.save", FileAccess.ModeFlags.Read);
+        using var saveFile = FileAccess.Open("user://savegame.save", FileAccess.ModeFlags.Read);
 
         if (saveFile == null)
             return;

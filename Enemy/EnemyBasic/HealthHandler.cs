@@ -14,8 +14,14 @@ public partial class HealthHandler : Node
     public override void _Ready()
     {
         _progressBar = GetNode<ProgressBar>("../ProgressBar");
-        _progressBar.MaxValue = MaximumHealth;
-        _progressBar.Value = CurrentHealth;
+
+        if (_progressBar != null)
+        {
+            _progressBar.MaxValue = MaximumHealth;
+            _progressBar.Value = CurrentHealth;
+        }
+        else
+            GD.PushError("ProgressBar not found.");
     }
     public void TakeDamage(int damage)
     {
@@ -25,18 +31,20 @@ public partial class HealthHandler : Node
         GD.Print($"{damage} Damage Taken.");
         
         if (CurrentHealth <= 0)
-        {
-            Die();
-        }
+            Kill();
     }
-    
+
+    private void Kill()
+    {
+        Global.Money += (int)Math.Round(5.0 * Math.Pow(5.0, 0.2 * Global.Difficulty), MidpointRounding.AwayFromZero);
+        Global.Difficulty++;
+        
+        Die();
+    }
     private void Die()
     {
-        Global.Global.Money += (int)Math.Round(50.0 * Math.Pow(5.0, 0.2 * Global.Global.Difficulty), MidpointRounding.AwayFromZero);
-        Global.Global.Difficulty++;
-        
         GD.Print("Enemy Died.");
-        Global.Global.Save();
+        Global.Save();
         
         GetParent<Node2D>().QueueFree();
     }

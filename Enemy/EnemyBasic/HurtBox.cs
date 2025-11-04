@@ -20,6 +20,6 @@ public partial class HurtBox : Area2D
     {
         if (area is not HurtHandler handler) return;
         if (handler.CollisionShape.Disabled == true) return;
-        _healthHandler.TakeDamage(10);
+        _healthHandler.TakeDamage(Global.Damage);
     }
 }
