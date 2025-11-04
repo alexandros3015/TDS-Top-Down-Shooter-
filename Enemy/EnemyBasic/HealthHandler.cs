@@ -23,6 +23,13 @@ public partial class HealthHandler : Node
         else
             GD.PushError("ProgressBar not found.");
     }
+
+    public void UpdateProgressBar()
+    {
+        _progressBar.MaxValue = MaximumHealth;
+        _progressBar.Value = CurrentHealth;
+    }
+    
     public void TakeDamage(int damage)
     {
         CurrentHealth -= damage;
@@ -41,7 +48,8 @@ public partial class HealthHandler : Node
         
         Die();
     }
-    private void Die()
+
+    public void Die()
     {
         GD.Print("Enemy Died.");
         Global.Save();

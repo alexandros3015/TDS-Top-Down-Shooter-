@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://ciugiajkkmue0"]
+[gd_scene load_steps=15 format=3 uid="uid://ciugiajkkmue0"]
 
+[ext_resource type="Script" uid="uid://bq2ckinjtgbrd" path="res://Enemy/EnemyBasic/EnemyBasic.cs" id="1_w708m"]
 [ext_resource type="Texture2D" uid="uid://djpyi1otejb5i" path="res://Assets/Image/skel.png" id="1_wq1o6"]
 [ext_resource type="Script" uid="uid://d0jxg8pjx5kfh" path="res://Enemy/EnemyBasic/MovementHandler.cs" id="2_hbyaf"]
 [ext_resource type="Script" uid="uid://d30mfysiwa6i1" path="res://Enemy/EnemyBasic/HurtBox.cs" id="2_iddve"]
@@ -53,6 +54,7 @@ bg_color = Color(0, 0.7137255, 0.45490196, 1)
 
 [node name="EnemyBasic" type="Node2D"]
 scale = Vector2(0.75, 0.75)
+script = ExtResource("1_w708m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5fbgk")
