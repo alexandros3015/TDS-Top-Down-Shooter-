@@ -6,8 +6,9 @@ README.md::TextFile::-1::1762061510::0::1::::<><><>0<>0<><>::
 ::res://Assets/font/::1762059986
 Minecraft.ttf::FontFile::2066098034138154367::1762059922::1762059986::1::::<><><>0<>0<>f72ac1fe8dd7c1564e4bf764f595fb3a<>res://.godot/imported/Minecraft.ttf-a62720a3e9ea58cb6d849259ed856ac6.fontdata::
 VCR_OSD_MONO_1.001.ttf::FontFile::3269558997012675012::1762059922::1762059986::1::::<><><>0<>0<>f93516a40769cb23e329978df9548205<>res://.godot/imported/VCR_OSD_MONO_1.001.ttf-e948e3d16d10cf7a1060c8a3b7b28cf9.fontdata::
-::res://Assets/Image/::1762906136
+::res://Assets/Image/::1762906193
 EnemyBasic.png::CompressedTexture2D::805153565313112722::1762906042::1762906052::1::::<><><>0<>0<>5612ebc1b180717126bc38aa1b71191d<>res://.godot/imported/EnemyBasic.png-a175ffa1d9aaf686368dc16cb5768407.ctex::
+EnemyCluster.png::CompressedTexture2D::2562956555778034602::1762906193::1762906194::1::::<><><>0<>0<>a9f6f1ee0a4dc699714bf2aadb2451fd<>res://.godot/imported/EnemyCluster.png-717ac8ff242f1b56a65f94c283de47ec.ctex::
 EnemyShadow.png::CompressedTexture2D::6232860253216948001::1762906136::1762906137::1::::<><><>0<>0<>14bbf2098535cb3070fe1c16b05de80d<>res://.godot/imported/EnemyShadow.png-14d35a3b983a606c9a656e712aeb5c80.ctex::
 EnemyShield.png::CompressedTexture2D::6669010289746049449::1762906130::1762906137::1::::<><><>0<>0<>738b486839d1d96ecb95ab4f1e4e1f6f<>res://.godot/imported/EnemyShield.png-39ea8f727c17b3ddac1a5f8b969cb942.ctex::
 TitleScreen.png::CompressedTexture2D::2416255723460814879::1762114719::1762840751::1::::<><><>0<>0<>e2286595090c6b230356184050ccfbb6<>res://.godot/imported/TitleScreen.png-79d411a77723cc03195f11384a134a78.ctex::
@@ -20,9 +21,9 @@ HealthHandler.cs::CSharpScript::6264621045268196455::1762887882::0::1::::HealthH
 HurtBox.cs::CSharpScript::9176897938438228230::1762214587::0::1::::<>Area2D<><>0<>0<><>::
 MovementHandler.cs::CSharpScript::8933971504297175193::1762213032::0::1::::<>Node<><>0<>0<><>::
 ::res://Enemy/EnemyBig/::1762116056
-::res://Enemy/EnemySpeedy/::1762228650
+::res://Enemy/EnemySpeedy/::1762906170
 EnemySpeedy.cs::CSharpScript::6428555253347083797::1762228650::0::1::::<>Node2D<><>0<>0<><>::
-EnemySpeedy.tscn::PackedScene::8843816146154052450::1762228256::0::1::::<><><>0<>0<><>::uid://ciugiajkkmue0::::res://Enemy/EnemyBasic/EnemyBasic.tscn<>uid://cxubmo4mkmwo8::::res://Enemy/EnemySpeedy/EnemySpeedy.cs
+EnemySpeedy.tscn::PackedScene::8843816146154052450::1762906170::0::1::::<><><>0<>0<><>::uid://ciugiajkkmue0::::res://Enemy/EnemyBasic/EnemyBasic.tscn<>uid://cxubmo4mkmwo8::::res://Enemy/EnemySpeedy/EnemySpeedy.cs<>uid://lqa05nngnw5w::::res://Assets/Image/EnemyBasic.png
 ::res://Enemy/EnemySupport/::1762116125
 ::res://Enemy/Goblin/::1762116291
 ::res://Enemy/GoblinIllusioner/::1762116469

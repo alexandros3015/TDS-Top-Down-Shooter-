@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("tds (top down shooter)")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75fd303083137412e5daf543b7736d9327e8760a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29f0f20252a04085384c29fe7b08a9f86385db1a")]
 [assembly: System.Reflection.AssemblyProductAttribute("tds (top down shooter)")]
 [assembly: System.Reflection.AssemblyTitleAttribute("tds (top down shooter)")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

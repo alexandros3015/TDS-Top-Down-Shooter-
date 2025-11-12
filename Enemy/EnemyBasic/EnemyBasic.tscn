@@ -111,7 +111,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"new_animation",
-"speed": 12.0
+"speed": 15.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bl6r4"]
@@ -124,13 +124,13 @@ bg_color = Color(7.52043e-08, 0.19499633, 0.11082462, 1)
 bg_color = Color(0, 0.7137255, 0.45490196, 1)
 
 [node name="EnemyBasic" type="Node2D"]
-scale = Vector2(0.75, 0.75)
 script = ExtResource("1_w708m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5fbgk")
 animation = &"new_animation"
-frame_progress = 0.26908872
+autoplay = "new_animation"
+frame_progress = 0.016781079
 
 [node name="HurtBox" type="Area2D" parent="."]
 script = ExtResource("2_iddve")
