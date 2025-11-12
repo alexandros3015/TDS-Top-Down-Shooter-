@@ -1,0 +1,6 @@
+.godot/
+export_presets.cfg
+*.csproj.user
+bin/
+obj/
+.mono/
