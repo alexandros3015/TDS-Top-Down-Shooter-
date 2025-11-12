@@ -14,7 +14,6 @@ public partial class Camera2d : Camera2D
         {
             _previousHealth = Global.Health;
             _shaker.Shake();
-            GD.Print("health changed");
         }
     }
 }
