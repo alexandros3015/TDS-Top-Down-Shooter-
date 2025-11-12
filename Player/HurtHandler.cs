@@ -5,7 +5,7 @@ namespace tdstopdownshooter.Player;
 public partial class HurtHandler : Area2D
 {
     private Timer _timer;
-    private bool _canShoot = true;
+    public bool CanShoot = true;
     public CollisionShape2D CollisionShape;
     private Timer _durationTimer;
     public override void _Ready()
@@ -43,15 +43,15 @@ public partial class HurtHandler : Area2D
 
     private void TimerOnTimeout()
     {
-        _canShoot = true;
+        CanShoot = true;
     }
     
 
     public override void _Process(double delta)
     {
-        if (!Input.IsActionJustPressed("Click") || !_canShoot) return;
+        if (!Input.IsActionJustPressed("Click") || !CanShoot) return;
         GD.Print("Starting Cooldown Timer");
-        _canShoot = false;
+        CanShoot = false;
         _timer.Start();
     
         GD.Print("Starting Duration Timer");
