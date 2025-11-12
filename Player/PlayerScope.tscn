@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bb2f4y86c6rs0"]
+[gd_scene load_steps=6 format=3 uid="uid://bb2f4y86c6rs0"]
 
 [ext_resource type="Texture2D" uid="uid://cmp1d675t086" path="res://Player/ScopePlaceholder.png" id="1_xmlvk"]
 [ext_resource type="Script" uid="uid://dvgnml320qf1w" path="res://Player/MovementHandler.cs" id="2_hg043"]
 [ext_resource type="Script" uid="uid://vaquojxrce4f" path="res://Player/HurtHandler.cs" id="3_fxi57"]
+[ext_resource type="Script" uid="uid://cu6ttden4n82b" path="res://Player/ScopeVisuals.cs" id="4_osf41"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hg043"]
 radius = 25.0
@@ -29,3 +30,8 @@ one_shot = true
 [node name="DurationTimer" type="Timer" parent="HurtHandler"]
 wait_time = 0.06
 one_shot = true
+
+[node name="ScopeVisuals" type="Node" parent="." node_paths=PackedStringArray("HurtHandler", "Scope")]
+script = ExtResource("4_osf41")
+HurtHandler = NodePath("../HurtHandler")
+Scope = NodePath("../Sprite2D")
