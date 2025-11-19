@@ -10,9 +10,9 @@ public partial class Upgrades : VBoxContainer
     [Export] public Button RadiusButton;
     [Export] public Label MoneyLabel;
 
-    private int _damageCost = 5;
-    private int _cooldownCost = 5;
-    private int _radiusCost = 5;
+    private long _damageCost = 5;
+    private long _cooldownCost = 5;
+    private long _radiusCost = 5;
 
     private static int Function(int timesBought)
     {
