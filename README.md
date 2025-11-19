@@ -34,7 +34,7 @@ The gameplay loop is as follows:
 - [Alexandros3015](https://github.com/alexandros3015) - Main developer
 - [NazarShuk](https://github.com/NazarShuk) - Side developer
 - [Dalepwo](https://github.com/Dalepwo) - Art
-- Daredrevl - Lore
+- [Daredrevl](https://github.com/Daredrevl) - Lore
 - Scam_bot - Character ideas
 - [Spedduck2](https://github.com/spedduck22) - Individual enemy lore
 - [Godot game engine](https://godotengine.org/)
