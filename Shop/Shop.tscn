@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs46ua2ntqaw6"]
+
+[ext_resource type="Script" uid="uid://ffv3mdht5h68" path="res://Shop/Upgrades.cs" id="1_3tnb3"]
+[ext_resource type="Script" uid="uid://b7e53ynosqgig" path="res://Shop/Leave.cs" id="2_ssic7"]
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 15.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Shop"
+
+[node name="Upgrades" type="VBoxContainer" parent="." node_paths=PackedStringArray("DamageButton", "CooldownButton", "RadiusButton", "MoneyLabel")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.0
+offset_top = -25.0
+offset_right = 67.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3tnb3")
+DamageButton = NodePath("Damage")
+CooldownButton = NodePath("Cooldown")
+RadiusButton = NodePath("Radius")
+MoneyLabel = NodePath("../Money")
+
+[node name="Damage" type="Button" parent="Upgrades"]
+layout_mode = 2
+text = "Damage: $-1"
+
+[node name="Radius" type="Button" parent="Upgrades"]
+layout_mode = 2
+text = "Radius: $-2"
+
+[node name="Cooldown" type="Button" parent="Upgrades"]
+layout_mode = 2
+text = "Cooldown: $-3"
+
+[node name="Money" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -15.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 16
+text = "Money: $0"
+
+[node name="Leave" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+offset_right = 8.0
+grow_vertical = 0
+text = "Leave Shop"
+script = ExtResource("2_ssic7")

@@ -44,6 +44,12 @@ public partial class HealthHandler : Node
     {
         Global.Money += (int)Math.Round(5.0 * Math.Pow(5.0, 0.2 * Global.Difficulty), MidpointRounding.AwayFromZero);
         Global.Difficulty++;
+        GD.Print($"New difficulty: {Global.Difficulty}");
+        
+        var dieScene = ResourceLoader.Load<PackedScene>("res://Enemy/EnemyBasic/EnemyDeath/die.tscn");
+        var die = dieScene.Instantiate<GpuParticles2D>();
+        die.Position = GetParent<Node2D>().Position;
+        GetParent<Node2D>().AddSibling(die);
         
         Die();
     }

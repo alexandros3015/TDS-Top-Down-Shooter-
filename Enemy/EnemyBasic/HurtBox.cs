@@ -1,3 +1,4 @@
+using System;
 using Godot;
 using tdstopdownshooter.Player;
 
@@ -19,7 +20,7 @@ public partial class HurtBox : Area2D
     private void OnAreaEntered(Area2D area)
     {
         if (area is not HurtHandler handler) return;
-        if (handler.CollisionShape.Disabled == true) return;
-        _healthHandler.TakeDamage(Global.Damage);
+        if (handler.CollisionShape.Disabled) return;
+        _healthHandler.TakeDamage( Math.Max(10, Global.Damage * 10) );
     }
 }

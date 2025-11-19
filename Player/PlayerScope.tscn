@@ -1,38 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://bb2f4y86c6rs0"]
 
-[ext_resource type="Texture2D" uid="uid://cmp1d675t086" path="res://Player/ScopePlaceholder.png" id="1_xmlvk"]
+[ext_resource type="Texture2D" uid="uid://cpxsfn4ecrh0i" path="res://Assets/Image/Crosshair.png" id="1_osf41"]
 [ext_resource type="Script" uid="uid://dvgnml320qf1w" path="res://Player/MovementHandler.cs" id="2_hg043"]
 [ext_resource type="Script" uid="uid://vaquojxrce4f" path="res://Player/HurtHandler.cs" id="3_fxi57"]
 [ext_resource type="Script" uid="uid://cu6ttden4n82b" path="res://Player/ScopeVisuals.cs" id="4_osf41"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hg043"]
-radius = 25.0
-
-[sub_resource type="Animation" id="Animation_osf41"]
-resource_name = "shoot"
-length = 0.25
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:scale:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0.25, -0.25, 0, 0.041666668, -0.00066684186, 0.2, -0.0049734088, 0.008333333, 0.095, -0.055, 0.25036678, -0.13333333, 0.040045828, 0.25, 0),
-"times": PackedFloat32Array(0, 0.033333335, 0.23333332)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:scale:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0.25, -0.25, 0, 0.041666668, 6.67274e-05, 0.2, -0.0049734088, 0.008333333, 0.095, -0.055, 0.25036678, -0.13333333, 0.040045828, 0.25, 0),
-"times": PackedFloat32Array(0, 0.033333335, 0.23333332)
-}
+radius = 30.0
 
 [sub_resource type="Animation" id="Animation_of6np"]
 length = 0.001
@@ -107,6 +81,32 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.06666667, 0.16666667, 0.25)
 }
 
+[sub_resource type="Animation" id="Animation_osf41"]
+resource_name = "shoot"
+length = 0.25
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.25, -0.25, 0, 0.041666668, -0.00066684186, 0.2, -0.0049734088, 0.008333333, 0.095, -0.055, 0.25036678, -0.13333333, 0.040045828, 0.25, 0),
+"times": PackedFloat32Array(0, 0.033333335, 0.23333332)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.25, -0.25, 0, 0.041666668, 6.67274e-05, 0.2, -0.0049734088, 0.008333333, 0.095, -0.055, 0.25036678, -0.13333333, 0.040045828, 0.25, 0),
+"times": PackedFloat32Array(0, 0.033333335, 0.23333332)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_of6np"]
 _data = {
 &"RESET": SubResource("Animation_of6np"),
@@ -118,7 +118,7 @@ _data = {
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_xmlvk")
+texture = ExtResource("1_osf41")
 
 [node name="MovementHandler" type="Node" parent="."]
 script = ExtResource("2_hg043")

@@ -26,6 +26,7 @@ public partial class SpawnArea : Node2D
             _timer.Timeout += TimerOnTimeout;
         else
             GD.PushError("Timer not found.");
+        _timer.WaitTime = MathF.Max(0.5f, Global.Difficulty * -0.1f + 10f);
     }
 
     private string PickEnemy()
@@ -54,5 +55,6 @@ public partial class SpawnArea : Node2D
         enemy.Position = new Vector2(0f, _rng.RandfRange(SpawnMinRange, SpawnMaxRange));
 
         _timer.WaitTime = MathF.Max(0.5f, Global.Difficulty * -0.1f + 10f);
+        GD.Print($"New health time: {_timer.WaitTime}");
     }
 }
