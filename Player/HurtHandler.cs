@@ -1,3 +1,4 @@
+using System;
 using Godot;
 namespace tdstopdownshooter.Player;
 
@@ -39,6 +40,13 @@ public partial class HurtHandler : Area2D
         }
         
         _durationTimer.Timeout += DurationTimerOnTimeout;
+
+        var shape = new CircleShape2D();
+        CollisionShape.SetShape(shape);
+
+        shape.Radius = Global.Radius + 30;
+
+        _timer.WaitTime = Math.Max(0.07, Global.Cooldown * -.1 + 1);
     }
     
     private void DurationTimerOnTimeout()

@@ -1,4 +1,4 @@
-using Godot;
+ using Godot;
 
 public partial class Global : Node
 {
@@ -6,9 +6,9 @@ public partial class Global : Node
     public static int Difficulty;
     public static long Money;
     public static int Health = 1000;
-    public static float Cooldown = 1.0f;
-    public static int Damage = 10;
-    public static float Radius = 50.0f;
+    public static int Cooldown = 0;
+    public static int Damage = 0;
+    public static int Radius = 0;
 
     // Info:
     public static readonly (string path, float weight)[] Enemies =
@@ -51,8 +51,8 @@ public override void _Ready()
         Difficulty = (int)saveFile.GetVar();
         Money = (long)saveFile.GetVar();
         Health = (int)saveFile.GetVar();
-        Cooldown = (float)saveFile.GetVar();
+        Cooldown = (int)saveFile.GetVar();
         Damage = (int)saveFile.GetVar();
-        Radius = (float)saveFile.GetVar();
+        Radius = (int)saveFile.GetVar();
     }
 }

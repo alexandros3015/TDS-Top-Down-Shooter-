@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://dufv4t1fggqb8"]
+
+[ext_resource type="Texture2D" uid="uid://domm1yudy2jur" path="res://Assets/Image/particle.png" id="1_nekcb"]
+[ext_resource type="Script" uid="uid://d3fcqm4i3vpij" path="res://Enemy/EnemyBasic/EnemyDeath/Die.cs" id="2_5wbrb"]
+
+[sub_resource type="Curve" id="Curve_5wbrb"]
+_data = [Vector2(0.5138121, 0.3889646), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_g5c3o"]
+curve = SubResource("Curve_5wbrb")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dymxx"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 180.0
+initial_velocity_min = 257.73
+initial_velocity_max = 381.44
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_g5c3o")
+
+[node name="Die" type="GPUParticles2D" node_paths=PackedStringArray("ExpireTimer")]
+modulate = Color(1, 1, 1, 0.23700002)
+emitting = false
+amount = 100
+texture = ExtResource("1_nekcb")
+lifetime = 0.4
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 0
+draw_order = 0
+process_material = SubResource("ParticleProcessMaterial_dymxx")
+script = ExtResource("2_5wbrb")
+ExpireTimer = NodePath("ExpireTimer")
+
+[node name="ExpireTimer" type="Timer" parent="."]
+wait_time = 0.39
+autostart = true

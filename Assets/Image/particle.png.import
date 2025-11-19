@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmp1d675t086"
-path="res://.godot/imported/ScopePlaceholder.png-5e6e6d7fe9ee66a6a27937c9b5841347.ctex"
+uid="uid://domm1yudy2jur"
+path="res://.godot/imported/particle.png-07ee0908ec6bef9bb61a6361d691dee6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/ScopePlaceholder.png"
-dest_files=["res://.godot/imported/ScopePlaceholder.png-5e6e6d7fe9ee66a6a27937c9b5841347.ctex"]
+source_file="res://Assets/Image/particle.png"
+dest_files=["res://.godot/imported/particle.png-07ee0908ec6bef9bb61a6361d691dee6.ctex"]
 
 [params]
 
